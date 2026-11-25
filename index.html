@@ -1,28 +1,434 @@
-<!doctype html>
-<html lang="ko">
+<!DOCTYPE html>
+<html lang="ko" class="scroll-smooth">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="referrer" content="strict-origin-when-cross-origin">
-  <title>BAEHS27</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>배형서 | 보건의료행정학과 포트폴리오</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
   <style>
-    * { box-sizing: border-box; }
-    html, body { width: 100%; height: 100%; margin: 0; }
-    body { font-family: system-ui, sans-serif; }
-    main { width: 100%; height: 100%; }
-    iframe { display: block; width: 100%; height: 100%; border: 0; }
-    .fallback { position: fixed; right: 1rem; bottom: 1rem; z-index: 1; padding: .65rem 1rem; border-radius: .5rem; background: #fff; color: #1a73e8; box-shadow: 0 2px 10px #0002; text-decoration: none; }
+    body { font-family: 'Noto Sans KR', sans-serif; }
   </style>
 </head>
-<body>
-  <main>
-    <iframe
-      src="https://sites.google.com/view/baehs27/full-page-embed"
-      title="BAEHS27 사이트"
-      allow="fullscreen"
-      loading="eager">
-    </iframe>
-  </main>
-  <a class="fallback" href="https://sites.google.com/view/baehs27/full-page-embed" target="_blank" rel="noopener noreferrer">새 창에서 열기</a>
+<body class="bg-slate-50 text-slate-800 antialiased selection:bg-teal-100 selection:text-teal-900">
+
+  <!-- Top Navigation -->
+  <header class="sticky top-0 z-40 bg-white/90 backdrop-blur-md border-b border-slate-200">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 h-16 flex items-center justify-between">
+      <a href="#top" class="flex items-center gap-2 font-bold text-lg text-slate-900">
+        <span class="w-8 h-8 rounded-lg bg-teal-600 text-white flex items-center justify-center text-sm font-extrabold">배</span>
+        <span>배형서 <span class="text-teal-600 font-medium text-sm ml-1">보건의료행정학과</span></span>
+      </a>
+      <nav class="hidden sm:flex items-center gap-6 text-sm font-medium text-slate-600">
+        <a href="#about" class="hover:text-teal-600 transition">자기소개 & 역량</a>
+        <a href="#projects" class="hover:text-teal-600 transition">프로젝트 갤러리</a>
+        <a href="#archive" class="hover:text-teal-600 transition">수정·프롬프트 기록</a>
+        <a href="#contact" class="px-4 py-2 rounded-full bg-teal-600 text-white hover:bg-teal-700 transition">연락처</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero & About Section -->
+  <section id="top" class="bg-gradient-to-br from-teal-900 via-teal-800 to-slate-900 text-white py-16 sm:py-24">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6">
+      <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-teal-500/20 border border-teal-400/30 text-teal-200 text-xs font-semibold mb-5">
+        <span>HEALTHCARE ADMINISTRATION PORTFOLIO</span>
+        <span>•</span>
+        <span>v1.2</span>
+      </div>
+      <h1 class="text-3xl sm:text-5xl font-extrabold tracking-tight leading-tight mb-5">
+        데이터와 행정으로<br class="sm:hidden" /> 더 나은 의료 현장을 설계하는<br />
+        <span class="text-teal-300">배형서</span>입니다.
+      </h1>
+      <p class="text-slate-200 text-base sm:text-lg max-w-2xl leading-relaxed mb-8">
+        보건의료행정학과에서 병원경영, 의무기록 및 보건의료 빅데이터, 건강보험 심사청구, 공중보건 커뮤니케이션을 학습하고 있습니다. 환자 중심의 효율적인 의료 서비스 전달체계 구축을 목표로 다양한 영상·리서치 프로젝트를 수행하고 있습니다.
+      </p>
+
+      <!-- Quick Summary Badges (v1.1) -->
+      <div class="flex flex-wrap gap-3 mb-8 text-xs sm:text-sm">
+        <span class="px-3.5 py-1.5 rounded-lg bg-white/10 border border-white/15 backdrop-blur-sm">🎓 전공: 보건의료행정학과</span>
+        <span class="px-3.5 py-1.5 rounded-lg bg-white/10 border border-white/15 backdrop-blur-sm">🎯 목표: 병원 원무·기획 및 보건의료 데이터 분석</span>
+        <span class="px-3.5 py-1.5 rounded-lg bg-white/10 border border-white/15 backdrop-blur-sm">📞 010-8243-6848</span>
+      </div>
+
+      <div class="flex flex-wrap gap-3">
+        <a href="#projects" class="px-5 py-3 rounded-xl bg-teal-500 hover:bg-teal-400 text-slate-950 font-bold text-sm transition shadow-lg shadow-teal-950/30">
+          프로젝트 영상 보기
+        </a>
+        <button onclick="copyPhone()" class="px-5 py-3 rounded-xl bg-white/10 hover:bg-white/20 border border-white/20 text-white font-semibold text-sm transition">
+          연락처 복사 (010-8243-6848)
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Core Competencies -->
+  <section id="about" class="max-w-5xl mx-auto px-4 sm:px-6 py-16">
+    <div class="mb-10">
+      <p class="text-teal-600 font-bold text-xs uppercase tracking-wider mb-1">ABOUT & COMPETENCIES</p>
+      <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900">전공 핵심 역량</h2>
+    </div>
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+      <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm">
+        <div class="flex items-center justify-between mb-2">
+          <h3 class="font-bold text-lg text-slate-900">🏥 병원경영 및 원무행정</h3>
+          <span class="text-xs font-bold text-teal-700 bg-teal-50 px-2.5 py-1 rounded-md">88%</span>
+        </div>
+        <p class="text-sm text-slate-600 mb-4 leading-relaxed">외래·입원 원무 프로세스 이해 및 환자 동선 최적화를 통한 의료기관 운영 효율화 학습</p>
+        <div class="w-full h-2 bg-slate-100 rounded-full overflow-hidden">
+          <div class="h-full bg-teal-600 rounded-full" style="width: 88%"></div>
+        </div>
+      </div>
+
+      <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm">
+        <div class="flex items-center justify-between mb-2">
+          <h3 class="font-bold text-lg text-slate-900">📊 보건의료 빅데이터·통계</h3>
+          <span class="text-xs font-bold text-teal-700 bg-teal-50 px-2.5 py-1 rounded-md">85%</span>
+        </div>
+        <p class="text-sm text-slate-600 mb-4 leading-relaxed">질병 통계 및 의료 이용 현황 분석을 바탕으로 근거 기반 보건 정책 및 경영 인사이트 도출</p>
+        <div class="w-full h-2 bg-slate-100 rounded-full overflow-hidden">
+          <div class="h-full bg-teal-600 rounded-full" style="width: 85%"></div>
+        </div>
+      </div>
+
+      <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm">
+        <div class="flex items-center justify-between mb-2">
+          <h3 class="font-bold text-lg text-slate-900">📋 건강보험 심사·의무기록</h3>
+          <span class="text-xs font-bold text-teal-700 bg-teal-50 px-2.5 py-1 rounded-md">82%</span>
+        </div>
+        <p class="text-sm text-slate-600 mb-4 leading-relaxed">KCD 질병분류체계 및 건강보험 요양급여 기준에 따른 정확한 청구·심사 실무 기초 역량</p>
+        <div class="w-full h-2 bg-slate-100 rounded-full overflow-hidden">
+          <div class="h-full bg-teal-600 rounded-full" style="width: 82%"></div>
+        </div>
+      </div>
+
+      <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm">
+        <div class="flex items-center justify-between mb-2">
+          <h3 class="font-bold text-lg text-slate-900">🎬 공중보건 커뮤니케이션</h3>
+          <span class="text-xs font-bold text-teal-700 bg-teal-50 px-2.5 py-1 rounded-md">92%</span>
+        </div>
+        <p class="text-sm text-slate-600 mb-4 leading-relaxed">대중과 환자가 쉽게 이해할 수 있는 보건 캠페인 및 직무 소개 영상 콘텐츠 기획·제작</p>
+        <div class="w-full h-2 bg-slate-100 rounded-full overflow-hidden">
+          <div class="h-full bg-teal-600 rounded-full" style="width: 92%"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Project & Video Gallery -->
+  <section id="projects" class="bg-white border-y border-slate-200 py-16">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6">
+      <div class="flex flex-col sm:flex-row sm:items-end justify-between gap-4 mb-8">
+        <div>
+          <p class="text-teal-600 font-bold text-xs uppercase tracking-wider mb-1">PROJECT GALLERY</p>
+          <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900">프로젝트 및 영상 갤러리</h2>
+        </div>
+
+        <!-- Category Filter Tabs (v1.1) -->
+        <div class="flex flex-wrap gap-2" id="filter-tabs">
+          <button onclick="filterProjects('all')" data-filter="all" class="filter-btn active px-3.5 py-1.5 rounded-full text-xs font-bold bg-teal-600 text-white transition">전체</button>
+          <button onclick="filterProjects('campaign')" data-filter="campaign" class="filter-btn px-3.5 py-1.5 rounded-full text-xs font-bold bg-slate-100 text-slate-600 hover:bg-slate-200 transition">공중보건 캠페인</button>
+          <button onclick="filterProjects('career')" data-filter="career" class="filter-btn px-3.5 py-1.5 rounded-full text-xs font-bold bg-slate-100 text-slate-600 hover:bg-slate-200 transition">진로·직무 탐색</button>
+          <button onclick="filterProjects('research')" data-filter="research" class="filter-btn px-3.5 py-1.5 rounded-full text-xs font-bold bg-slate-100 text-slate-600 hover:bg-slate-200 transition">데이터·연구</button>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8" id="project-grid">
+        <!-- Video Project 1 -->
+        <article class="project-card bg-slate-50 rounded-2xl border border-slate-200 overflow-hidden shadow-sm flex flex-col" data-category="campaign">
+          <div class="relative bg-slate-900 aspect-video">
+            <video src="과제.mp4" controls playsinline preload="metadata" class="w-full h-full object-contain"></video>
+          </div>
+          <div class="p-6 flex-1 flex flex-col justify-between">
+            <div>
+              <div class="flex items-center justify-between gap-2 mb-2">
+                <span class="px-2.5 py-0.5 rounded-md bg-teal-100 text-teal-800 text-xs font-bold">공중보건 캠페인</span>
+                <span class="text-xs text-slate-400">파일: 과제.mp4 (00:05)</span>
+              </div>
+              <h3 class="text-xl font-bold text-slate-900 mb-2">올바른 손씻기 감염예방 숏폼 캠페인</h3>
+              <p class="text-sm text-slate-600 leading-relaxed mb-4">
+                의료기관 내 감염병 예방과 일상 속 개인위생 수칙 준수를 독려하기 위해 기획한 숏폼 공익 캠페인 영상입니다. 핵심 메시지를 직관적으로 전달하도록 구성했습니다.
+              </p>
+            </div>
+            <div class="pt-4 border-t border-slate-200 flex items-center justify-between">
+              <div class="flex flex-wrap gap-1.5">
+                <span class="text-xs bg-white border border-slate-200 px-2 py-0.5 rounded text-slate-600">#감염관리</span>
+                <span class="text-xs bg-white border border-slate-200 px-2 py-0.5 rounded text-slate-600">#공중보건</span>
+              </div>
+              <button onclick="openModal('올바른 손씻기 감염예방 숏폼 캠페인', '과제.mp4')" class="text-xs font-bold text-teal-700 hover:text-teal-900">
+                크게 보기 →
+              </button>
+            </div>
+          </div>
+        </article>
+
+        <!-- Video Project 2 -->
+        <article class="project-card bg-slate-50 rounded-2xl border border-slate-200 overflow-hidden shadow-sm flex flex-col" data-category="career">
+          <div class="relative bg-slate-900 aspect-video">
+            <video src="202611091402 (1).mp4" controls playsinline preload="metadata" class="w-full h-full object-contain"></video>
+          </div>
+          <div class="p-6 flex-1 flex flex-col justify-between">
+            <div>
+              <div class="flex items-center justify-between gap-2 mb-2">
+                <span class="px-2.5 py-0.5 rounded-md bg-sky-100 text-sky-800 text-xs font-bold">진로·직무 탐색</span>
+                <span class="text-xs text-slate-400">파일: 202611091402 (1).mp4 (01:15)</span>
+              </div>
+              <h3 class="text-xl font-bold text-slate-900 mb-2">보건의료행정학과 전공 및 진로 소개 영상</h3>
+              <p class="text-sm text-slate-600 leading-relaxed mb-4">
+                보건의료행정학과의 주요 교과과정과 병원 원무·보험심사·보건의료정보관리 등 다양한 진출 분야를 알기 쉽게 소개한 프레젠테이션형 영상 프로젝트입니다.
+              </p>
+            </div>
+            <div class="pt-4 border-t border-slate-200 flex items-center justify-between">
+              <div class="flex flex-wrap gap-1.5">
+                <span class="text-xs bg-white border border-slate-200 px-2 py-0.5 rounded text-slate-600">#보건의료행정</span>
+                <span class="text-xs bg-white border border-slate-200 px-2 py-0.5 rounded text-slate-600">#직무탐색</span>
+              </div>
+              <button onclick="openModal('보건의료행정학과 전공 및 진로 소개 영상', '202611091402 (1).mp4')" class="text-xs font-bold text-teal-700 hover:text-teal-900">
+                크게 보기 →
+              </button>
+            </div>
+          </div>
+        </article>
+
+        <!-- Research Card 3 -->
+        <article class="project-card bg-slate-50 rounded-2xl border border-slate-200 p-6 shadow-sm flex flex-col justify-between md:col-span-2" data-category="research">
+          <div>
+            <div class="flex items-center justify-between gap-2 mb-2">
+              <span class="px-2.5 py-0.5 rounded-md bg-amber-100 text-amber-800 text-xs font-bold">데이터·연구</span>
+              <span class="text-xs text-slate-400">전공 심화 리서치</span>
+            </div>
+            <h3 class="text-xl font-bold text-slate-900 mb-2">외래 진료 대기시간 단축을 위한 원무 프로세스 개선안</h3>
+            <p class="text-sm text-slate-600 leading-relaxed mb-4">
+              모바일 사전 접수 및 수납 키오스크 이용 데이터를 바탕으로 피크 시간대 원무 창구 혼잡도를 완화하고 환자 만족도를 높이기 위한 행정 개선 시나리오를 설계했습니다.
+            </p>
+          </div>
+          <div class="flex flex-wrap gap-2">
+            <span class="text-xs bg-white border border-slate-200 px-2.5 py-1 rounded text-slate-600">#병원경영</span>
+            <span class="text-xs bg-white border border-slate-200 px-2.5 py-1 rounded text-slate-600">#환자경험개선</span>
+            <span class="text-xs bg-white border border-slate-200 px-2.5 py-1 rounded text-slate-600">#원무프로세스</span>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Revision History & Prompt Archive (v1.2) -->
+  <section id="archive" class="max-w-5xl mx-auto px-4 sm:px-6 py-16">
+    <div class="mb-10">
+      <p class="text-teal-600 font-bold text-xs uppercase tracking-wider mb-1">REVISION & PROMPT ARCHIVE</p>
+      <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900">수정 기록 및 프롬프트 아카이브</h2>
+      <p class="text-sm text-slate-600 mt-1">과제 제작 과정에서의 버전별 개선 이력과 생성에 사용된 프롬프트 기록입니다.</p>
+    </div>
+
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+      <!-- Revision Timeline -->
+      <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm">
+        <h3 class="font-bold text-lg text-slate-900 mb-5 flex items-center gap-2">
+          <span>📝 버전별 수정 기록 (Changelog)</span>
+        </h3>
+        <ol class="relative border-l-2 border-teal-200 ml-3 space-y-6">
+          <li class="ml-5">
+            <span class="absolute -left-2.5 w-4 h-4 rounded-full bg-slate-300 border-2 border-white"></span>
+            <div class="flex items-center gap-2 mb-1">
+              <span class="text-xs font-extrabold px-2 py-0.5 rounded bg-slate-100 text-slate-700">v1.0 초기 생성</span>
+              <span class="text-xs text-slate-400">기본 구조 구축</span>
+            </div>
+            <p class="text-sm text-slate-600">보건의료행정학과 자기소개, 프로젝트 영상 2종 갤러리, 원클릭 연락처 복사 기능을 갖춘 원페이지 레이아웃 초안 구성.</p>
+          </li>
+          <li class="ml-5">
+            <span class="absolute -left-2.5 w-4 h-4 rounded-full bg-teal-400 border-2 border-white"></span>
+            <div class="flex items-center gap-2 mb-1">
+              <span class="text-xs font-extrabold px-2 py-0.5 rounded bg-teal-50 text-teal-700">v1.1 1차 수정</span>
+              <span class="text-xs text-slate-400">시각화 & 필터링 고도화</span>
+            </div>
+            <p class="text-sm text-slate-600">전공 핵심 역량 4대 항목에 숙련도 프로그레스 바와 요약 배지를 추가하고, 프로젝트 갤러리 카테고리 필터 탭(전체/캠페인/진로/연구) 구현.</p>
+          </li>
+          <li class="ml-5">
+            <span class="absolute -left-2.5 w-4 h-4 rounded-full bg-teal-600 border-2 border-white"></span>
+            <div class="flex items-center gap-2 mb-1">
+              <span class="text-xs font-extrabold px-2 py-0.5 rounded bg-teal-600 text-white">v1.2 2차 수정 (현재)</span>
+              <span class="text-xs text-slate-400">아카이브 & 과제 패키징</span>
+            </div>
+            <p class="text-sm text-slate-600">제작 과정 증빙을 위한 수정 기록 타임라인 및 프롬프트 아카이브 섹션을 신설하고, 로컬 영상 파일(`과제.mp4`, `202611091402 (1).mp4`) 경로 최적화.</p>
+          </li>
+        </ol>
+      </div>
+
+      <!-- Prompt History -->
+      <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm space-y-4">
+        <h3 class="font-bold text-lg text-slate-900 mb-2 flex items-center gap-2">
+          <span>💬 사용된 프롬프트 기록</span>
+        </h3>
+
+        <div class="bg-slate-900 text-slate-100 rounded-xl p-4">
+          <div class="flex items-center justify-between mb-2">
+            <span class="text-xs font-bold text-teal-400">Prompt #01 — 포트폴리오 초기 제작</span>
+            <button onclick="copyText('prompt-1')" class="text-xs px-2.5 py-1 rounded bg-slate-800 hover:bg-slate-700 text-slate-300 transition">복사</button>
+          </div>
+          <p id="prompt-1" class="text-xs sm:text-sm text-slate-300 leading-relaxed">
+            이 영상 포함해서 자기소개랑 프로젝트 갤러리 연락처를 담은 원페이지 포트폴리오 사이트 만들어줘. 내 이름은 배형서고 연락처는 010 8243 6848임. 자기소개는 보건의료행정학과 학생이라는거 가지고 대충 만들어줘.
+          </p>
+        </div>
+
+        <div class="bg-slate-900 text-slate-100 rounded-xl p-4">
+          <div class="flex items-center justify-between mb-2">
+            <span class="text-xs font-bold text-teal-400">Prompt #02 — 2회 수정 및 기록 추가</span>
+            <button onclick="copyText('prompt-2')" class="text-xs px-2.5 py-1 rounded bg-slate-800 hover:bg-slate-700 text-slate-300 transition">복사</button>
+          </div>
+          <p id="prompt-2" class="text-xs sm:text-sm text-slate-300 leading-relaxed">
+            수정 2번해서 수정기록 남겨주고 프롬프트도 남겨줘.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="bg-slate-900 text-white py-16">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
+        <div>
+          <p class="text-teal-400 font-bold text-xs uppercase tracking-wider mb-1">CONTACT</p>
+          <h2 class="text-2xl sm:text-3xl font-extrabold mb-3">연락처 및 문의하기</h2>
+          <p class="text-slate-300 text-sm leading-relaxed mb-6">
+            보건의료행정 관련 프로젝트 협업, 실습 및 채용 문의는 아래 연락처로 편하게 연락해 주세요.
+          </p>
+
+          <div class="bg-slate-800/80 border border-slate-700 rounded-2xl p-5 space-y-4">
+            <div>
+              <p class="text-xs text-slate-400">이름 / 소속</p>
+              <p class="font-bold text-base">배형서 · 보건의료행정학과</p>
+            </div>
+            <div class="flex items-center justify-between gap-3 pt-3 border-t border-slate-700">
+              <div>
+                <p class="text-xs text-slate-400">휴대전화</p>
+                <p class="font-extrabold text-xl text-teal-300 tracking-wide">010-8243-6848</p>
+              </div>
+              <div class="flex gap-2">
+                <button onclick="copyPhone()" class="px-3.5 py-2 rounded-xl bg-teal-600 hover:bg-teal-500 text-white text-xs font-bold transition">
+                  번호 복사
+                </button>
+                <a href="tel:01082436848" class="px-3.5 py-2 rounded-xl bg-slate-700 hover:bg-slate-600 text-white text-xs font-bold transition">
+                  전화 걸기
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <form onsubmit="handleContactSubmit(event)" class="bg-white text-slate-800 rounded-2xl p-6 shadow-xl space-y-4">
+          <h3 class="font-bold text-lg text-slate-900">간편 메시지 남기기</h3>
+          <div>
+            <label class="block text-xs font-bold text-slate-600 mb-1">성함 / 소속</label>
+            <input type="text" required placeholder="예: 홍길동 / OO병원 원무팀" class="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 text-sm focus:outline-none focus:border-teal-600" />
+          </div>
+          <div>
+            <label class="block text-xs font-bold text-slate-600 mb-1">회신받을 연락처 또는 이메일</label>
+            <input type="text" required placeholder="예: 010-0000-0000" class="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 text-sm focus:outline-none focus:border-teal-600" />
+          </div>
+          <div>
+            <label class="block text-xs font-bold text-slate-600 mb-1">문의 내용</label>
+            <textarea rows="3" required placeholder="문의하실 내용을 입력해 주세요." class="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 text-sm focus:outline-none focus:border-teal-600"></textarea>
+          </div>
+          <button type="submit" class="w-full py-3 rounded-xl bg-teal-600 hover:bg-teal-700 text-white font-bold text-sm transition">
+            메시지 전송하기
+          </button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-slate-950 text-slate-400 text-xs py-6 text-center border-t border-slate-800">
+    <p>© 2026 배형서 (보건의료행정학과). All rights reserved.</p>
+  </footer>
+
+  <!-- Video Preview Modal -->
+  <div id="videoModal" class="fixed inset-0 z-50 hidden bg-black/80 backdrop-blur-sm items-center justify-center p-4">
+    <div class="bg-slate-900 rounded-2xl max-w-3xl w-full overflow-hidden border border-slate-700 shadow-2xl">
+      <div class="flex items-center justify-between px-5 py-3.5 border-b border-slate-800 text-white">
+        <h4 id="modalTitle" class="font-bold text-sm sm:text-base">영상 상세보기</h4>
+        <button onclick="closeModal()" class="text-slate-400 hover:text-white text-lg font-bold px-2">✕</button>
+      </div>
+      <div class="bg-black aspect-video">
+        <video id="modalVideo" controls class="w-full h-full object-contain"></video>
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast Notification -->
+  <div id="toast" class="fixed bottom-6 right-6 z-50 hidden bg-slate-900 text-white text-xs sm:text-sm font-semibold px-4 py-3 rounded-xl shadow-lg border border-slate-700">
+    복사되었습니다!
+  </div>
+
+  <script>
+    function showToast(msg) {
+      const toast = document.getElementById('toast');
+      toast.textContent = msg;
+      toast.classList.remove('hidden');
+      setTimeout(() => toast.classList.add('hidden'), 2500);
+    }
+
+    function copyPhone() {
+      navigator.clipboard.writeText('010-8243-6848').then(() => {
+        showToast('연락처(010-8243-6848)가 클립보드에 복사되었습니다.');
+      });
+    }
+
+    function copyText(elementId) {
+      const text = document.getElementById(elementId).innerText.trim();
+      navigator.clipboard.writeText(text).then(() => {
+        showToast('프롬프트가 클립보드에 복사되었습니다.');
+      });
+    }
+
+    function filterProjects(category) {
+      document.querySelectorAll('.filter-btn').forEach(btn => {
+        if (btn.dataset.filter === category) {
+          btn.classList.remove('bg-slate-100', 'text-slate-600');
+          btn.classList.add('bg-teal-600', 'text-white');
+        } else {
+          btn.classList.remove('bg-teal-600', 'text-white');
+          btn.classList.add('bg-slate-100', 'text-slate-600');
+        }
+      });
+
+      document.querySelectorAll('.project-card').forEach(card => {
+        if (category === 'all' || card.dataset.category === category) {
+          card.classList.remove('hidden');
+        } else {
+          card.classList.add('hidden');
+        }
+      });
+    }
+
+    function openModal(title, src) {
+      const modal = document.getElementById('videoModal');
+      const video = document.getElementById('modalVideo');
+      document.getElementById('modalTitle').textContent = title;
+      video.src = src;
+      modal.classList.remove('hidden');
+      modal.classList.add('flex');
+      video.play();
+    }
+
+    function closeModal() {
+      const modal = document.getElementById('videoModal');
+      const video = document.getElementById('modalVideo');
+      video.pause();
+      video.src = '';
+      modal.classList.add('hidden');
+      modal.classList.remove('flex');
+    }
+
+    function handleContactSubmit(e) {
+      e.preventDefault();
+      e.target.reset();
+      showToast('문의 메시지가 접수되었습니다. 감사합니다!');
+    }
+  </script>
 </body>
 </html>
